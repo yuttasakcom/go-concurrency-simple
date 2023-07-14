@@ -21,6 +21,23 @@ performs an HTTP HEAD request on each one and reports its results.
 
 ```
 
+## Mutex Multiple reader single writer
+
+```go
+var mu = &sync.RWMutex{}
+var balance int
+
+func getBalance(w *sync.WaitGroup) int {
+  mu.RLock()
+  defer func() {
+      mu.RUnlock()
+      w.Done()
+  }()
+
+  return balance
+}
+```
+
 ## Reference
 
 - [Introducing the Go Race Detector](https://go.dev/blog/race-detector)
