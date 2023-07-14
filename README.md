@@ -13,7 +13,11 @@
 ## Go Mantra
 
 ```
-Go's mantra for concurrency is: Do not communicate by sharing memory;instead, share memory by communicating. In this article we will review a simple concurrent program called headcheck , that, given a list of URLs, performs an HTTP HEAD request on each one and reports its results.
+Go's mantra for concurrency is: Do not communicate by sharing memory;
+instead, share memory by communicating.
+In this article we will review a simple concurrent program called headcheck ,
+that, given a list of URLs,
+performs an HTTP HEAD request on each one and reports its results.
 
 ```
 
